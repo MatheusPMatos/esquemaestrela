@@ -11,7 +11,7 @@ import (
 )
 
 func ConectaComBancodeDados() (*gorm.DB, error) {
-	dsn := "host=192.168.1.6 user=postgres password=postgres dbname=postgres port=5432 sslmode=disable"
+	dsn := "host=localhost user=postgres password=postgres dbname=postgres port=5432 sslmode=disable"
 	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Discard,
 	})
